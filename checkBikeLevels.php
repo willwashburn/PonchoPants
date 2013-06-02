@@ -25,6 +25,10 @@
         $stationData = json_decode(curl_exec($ch), true);
         curl_close($ch);
 
+        $time = time();
+
+        echo $time. PHP_EOL;
+
         foreach ($stationData['stationBeanList'] as $station) {
 
             $sql    = 'select id from stations where id = :id';
