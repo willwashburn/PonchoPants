@@ -68,7 +68,7 @@
 
             }
 
-            $sql = 'select totalDocks,availableDocks,status,statusCode from station_status where station_id =:id order by timestamp asc limit 1';
+            $sql = 'select totalDocks,availableDocks,status,statusCode from station_status where station_id =:id order by timestamp DESC limit 1';
             $STH = $DBO->prepare($sql);
             $STH->execute(array(':id' => $station['id']));
 
